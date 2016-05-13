@@ -9,6 +9,15 @@
 Name:
 <br/>
 <input type="text" data-ng-model="name"/> {{name}}
+<div class="container" data-ng-init="names=['Dave', 'Napur', 'Heedy', 'Shriva']">
+
+    <h3>Looping with the ng-repeat directive</h3>
+    <ul>
+        <li data-ng-repeat="item in names">{{item}}</li>
+    </ul>
+
+</div>
+
 <script src="angular.min.js"></script>
 </body>
 </html>
