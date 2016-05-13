@@ -5,7 +5,7 @@
     <title>AngularJS Training Project</title>
 
 </head>
-<body>
+<body data-ng-init="customers=[{name:'John Smith', city:'Phoenix'}, {name: 'John Doe', city:'New York'}, {name:'Jane Doe', city:'San Fransisco'}]">
 Name:
 <br/>
 <input type="text" data-ng-model="name"/> {{name}}
@@ -13,7 +13,7 @@ Name:
 
     <h3>Looping with the ng-repeat directive</h3>
     <ul>
-        <li data-ng-repeat="item in names">{{item}}</li>
+        <li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">{{cust.name | uppercase}} - {{cust.city}}</li>
     </ul>
 
 </div>
